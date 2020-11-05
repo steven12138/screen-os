@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import Lock from "@material-ui/icons/Lock";
+import axios from "axios";
 
 class LoginBox extends React.Component {
   constructor(props) {
@@ -30,8 +31,19 @@ class LoginBox extends React.Component {
       this.setState({
         valid: false,
       });
+      return;
     }
-    console.log(this.state.password);
+    let params = new URLSearchParams();
+    params.append("password", this.state.password);
+    axios
+      .post("", params)
+      .then((res) => {
+        let data = res.data;
+        console.log(data);
+      })
+      .catch((res) => {
+        console.error(res);
+      });
   }
   render() {
     return (

@@ -1,16 +1,21 @@
 import React from "react";
 import Header from "../components/LoginBar";
 import FloatingBtn from "../components/floating_btn";
-// import Container from "@material-ui/core/Container";
 import LoginBox from "../components/LoginBox";
-// import Grid from "@material-ui/core/Grid";
+import BKImage from "../assets/bkg.jpg";
 
 class Home extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        <Header></Header>
-        <div style={{ height: "calc(100vh - 64px)" }}>
+        <Header changePage={this.props.changePage}></Header>
+        <div
+          style={{
+            height: "calc(100vh - 64px)",
+            backgroundImage: `url(${BKImage})`,
+            backgroundPosition: "center",
+          }}
+        >
           <div
             style={{
               display: "flex",
