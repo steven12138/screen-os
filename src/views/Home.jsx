@@ -1,4 +1,3 @@
-import classes from "*.module.scss";
 import React from "react";
 
 class Home extends React.Component {
@@ -6,3 +5,5 @@ class Home extends React.Component {
         return <div>HomePage</div>;
     }
 }
+
+export default Home;
