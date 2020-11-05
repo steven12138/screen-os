@@ -11,13 +11,13 @@ class PageCtrl extends React.Component {
     }
     render() {
         let element = undefined;
-        if (this.state.page == "Home") {
+        if (this.state.page === "Home") {
             element = <Home />;
         }
-        else if (this.state.page == "View") {
+        else if (this.state.page === "View") {
             element = <div>View Page</div>;
         }
-        else if (this.state.page == "admin") {
+        else if (this.state.page === "admin") {
             element = <div>Admin Page</div>;
         }
         return element;
