@@ -16,7 +16,7 @@ class FloatingBtn extends React.Component {
         style={{ position: "absolute", right: "25px", bottom: "25px" }}
         onClick={this.handleClick}
       >
-        <Fab color="primary" aria-label="BookmarkBorder">
+        <Fab color="secondary" aria-label="BookmarkBorder">
           <BookmarkBorderIcon />
         </Fab>
       </div>

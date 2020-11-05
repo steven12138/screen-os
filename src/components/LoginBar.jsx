@@ -21,7 +21,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function About() {
-  window.open("https://pkuschool.github.io/SubIT/");
+  setTimeout(() => {
+    window.open("https://pkuschool.github.io/SubIT/");
+  }, 300);
 }
 
 export default function ButtonAppBar() {
@@ -42,7 +44,9 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             屏幕管理
           </Typography>
-          <img src={SubITLogo} onClick={About} style={{height:"50px",}}/>
+          <Button color="inherit" onClick={About}>
+            <img src={SubITLogo} alt="SubIT" style={{ height: "50px" }} />
+          </Button>
         </Toolbar>
       </AppBar>
     </div>

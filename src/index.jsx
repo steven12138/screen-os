@@ -21,13 +21,9 @@ class PageCtrl extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        {this.state.page === "Home" ? (
-          <Home changePage={this.changePage} />
-        ) : (
-          ""
-        )}
-        {this.state.page === "View" ? <View /> : ""}
-        {this.state.page === "Admin" ? <Admin /> : ""}
+        {this.state.page === "Home" && <Home changePage={this.changePage} />}
+        {this.state.page === "View" && <View />}
+        {this.state.page === "Admin" && <Admin />}
       </React.StrictMode>
     );
   }
