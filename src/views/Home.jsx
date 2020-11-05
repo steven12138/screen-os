@@ -1,8 +1,11 @@
 import React from "react";
+import Header from "../components/LoginBar";
 
 class Home extends React.Component {
     render() {
-        return <div>HomePage</div>;
+        return (
+            <Header />
+        );
     }
 }
 
