@@ -1,13 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
+import Home from './views/Home';
 
-function App() {
-  return (
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
-  );
+class PageCtrl extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            page: "Home",
+        }
+    }
+    render() {
+        let element = undefined;
+        if (this.state.page == "Home") {
+            element = <Home />;
+        }
+        else if (this.state.page == "View") {
+            element = <div>View Page</div>;
+        }
+        else if (this.state.page == "admin") {
+            element = <div>Admin Page</div>;
+        }
+        return element;
+    }
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+
+ReactDOM.render(
+    <React.StrictMode>
+        <PageCtrl />
+    </React.StrictMode>,
+    document.getElementById('root')
+);
+
