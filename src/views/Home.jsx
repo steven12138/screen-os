@@ -1,8 +1,36 @@
 import React from "react";
 import Header from "../components/LoginBar";
+import FloatingBtn from "../components/floating_btn";
+import LoginBox from "../components/LoginBox";
+import BKImage from "../assets/bkg.jpg";
 
-export default function Home() {
+class Home extends React.Component {
+  render() {
     return (
-        <Header />
+      <React.StrictMode>
+        <Header changePage={this.props.changePage}></Header>
+        <div
+          style={{
+            height: "calc(100vh - 64px)",
+            backgroundImage: `url(${BKImage})`,
+            backgroundPosition: "center",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+            }}
+          >
+            <LoginBox></LoginBox>
+          </div>
+          <FloatingBtn changePage={this.props.changePage}></FloatingBtn>
+        </div>
+      </React.StrictMode>
     );
-};
+  }
+}
+
+export default Home;

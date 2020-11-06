@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import Icon from "@material-ui/core/Icon";
+import SubITLogo from "../assets/SubIT.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +21,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function About() {
-  window.open("https://pkuschool.github.io/SubIT/");
+  setTimeout(() => {
+    window.open("https://pkuschool.github.io/SubIT/");
+  }, 300);
 }
 
 export default function ButtonAppBar() {
@@ -39,10 +42,10 @@ export default function ButtonAppBar() {
             <Icon>book_multiple_variant</Icon>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            屏幕管理·Home
+            屏幕管理
           </Typography>
           <Button color="inherit" onClick={About}>
-            Powered By SubIT·steven12138
+            <img src={SubITLogo} alt="SubIT" style={{ height: "50px" }} />
           </Button>
         </Toolbar>
       </AppBar>
