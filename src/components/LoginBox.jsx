@@ -9,6 +9,7 @@ import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import Lock from "@material-ui/icons/Lock";
 import axios from "axios";
+import Paper from '@material-ui/core/Paper';
 
 class LoginBox extends React.Component {
   constructor(props) {
@@ -49,17 +50,15 @@ class LoginBox extends React.Component {
     return (
       <Card style={{ width: "500px", maxHeight: "300px" }}>
         <CardContent style={{ padding: 0 }}>
-          <CardActionArea
-            style={{
-              padding: "20px 20px 15px 20px",
-              borderRadius: "4px 4px 0 0",
-              backgroundColor: "#3f51b5",
-            }}
-          >
+          <Paper style={{
+            padding: "20px 20px 15px 20px",
+            borderRadius: "4px 4px 0 0",
+            backgroundColor: "#3f51b5",
+          }}>
             <Typography style={{ color: "white", fontSize: "1.5em" }}>
               登录
             </Typography>
-          </CardActionArea>
+          </Paper>
           <CardContent justify="center">
             <Grid
               container

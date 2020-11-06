@@ -12,8 +12,10 @@ class Home extends React.Component {
         <div
           style={{
             height: "calc(100vh - 64px)",
+            backgroundSize: "cover",
             backgroundImage: `url(${BKImage})`,
             backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         >
           <div
