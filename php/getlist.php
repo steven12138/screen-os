@@ -1,8 +1,8 @@
 <?php
 include_once('./connect.php');
-
+$dvc = $_POST["device"];
 $db = new database();
-$sql = "SELECT * FROM `playlist` ORDER BY id";
+$sql = "SELECT * FROM `playlist` WHERE `device`='$dvc' ORDER BY id";
 $res = $db->query($sql);
 if ($res->num_rows < 1) {
     echo json_encode(array("ret" => SUCCESS, "data" => array()));
