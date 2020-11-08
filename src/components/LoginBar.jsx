@@ -26,7 +26,7 @@ function About() {
   }, 300);
 }
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar(props) {
   const classes = useStyles();
 
   return (
@@ -42,7 +42,7 @@ export default function ButtonAppBar() {
             <Icon>book_multiple_variant</Icon>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            屏幕管理
+            {props.title}
           </Typography>
           <Button color="inherit" onClick={About}>
             <img src={SubITLogo} alt="SubIT" style={{ height: "50px" }} />

@@ -8,7 +8,7 @@ class PageCtrl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: "Home",
+      page: "View",
     };
     this.changePage = this.changePage.bind(this);
   }
