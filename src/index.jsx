@@ -8,7 +8,7 @@ class PageCtrl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: "Admin",
+      page: "Home",
     };
     this.changePage = this.changePage.bind(this);
   }
@@ -20,18 +20,13 @@ class PageCtrl extends React.Component {
   }
   render() {
     return (
-      <React.StrictMode>
+      <div>
         {this.state.page === "Home" && <Home changePage={this.changePage} />}
         {this.state.page === "View" && <View />}
         {this.state.page === "Admin" && <Admin />}
-      </React.StrictMode>
+      </div>
     );
   }
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <PageCtrl />
-  </React.StrictMode>,
-  document.querySelector("#root")
-);
+ReactDOM.render(<PageCtrl />, document.querySelector("#root"));

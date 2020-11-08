@@ -7,7 +7,7 @@ import BKImage from "../assets/bkg.jpg";
 class Home extends React.Component {
   render() {
     return (
-      <React.StrictMode>
+      <div>
         <Header changePage={this.props.changePage} title="大屏管理"></Header>
         <div
           style={{
@@ -30,7 +30,7 @@ class Home extends React.Component {
           </div>
           <FloatingBtn changePage={this.props.changePage}></FloatingBtn>
         </div>
-      </React.StrictMode>
+      </div>
     );
   }
 }
