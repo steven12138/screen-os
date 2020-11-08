@@ -8,7 +8,11 @@ class Home extends React.Component {
   render() {
     return (
       <React.StrictMode>
+<<<<<<< HEAD
         <Header changePage={this.props.changePage}/>
+=======
+        <Header changePage={this.props.changePage} title="大屏管理"></Header>
+>>>>>>> origin/master
         <div
           style={{
             height: "calc(100vh - 64px)",
