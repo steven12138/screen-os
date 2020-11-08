@@ -30,7 +30,7 @@ class adminBar extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <AppBar position="static" className={classes.appBar}>
+      <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <IconButton
             color="inherit"
