@@ -15,7 +15,7 @@ class Player extends React.Component {
       element = (
         <div
           style={{
-            height: "calc(100vh - 70px)",
+            height: "calc(100vh - 64px)",
             width: "100%",
             backgroundImage: "url(" + this.props.url + ")",
             backgroundPosition: "center",
@@ -38,7 +38,7 @@ class Player extends React.Component {
     } else if (this.props.type === 2) {
       element = (
         <iframe
-          style={{ height: "calc(100vh - 70px)", width: "100%" }}
+          style={{ height: "calc(100vh - 10px)", width: "100%" }}
           src={this.props.url}
           frameBorder="0"
         ></iframe>

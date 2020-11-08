@@ -1,6 +1,7 @@
 import React from "react";
 import Player from "../components/Player";
 import axios from "axios";
+import LoginBar from "../components/LoginBar";
 
 function ListPlayer(props) {
   const list = props.list;
@@ -25,7 +26,7 @@ class ScrollPlay extends React.Component {
     super(props);
     this.state = {
       page: 0,
-      time: 2000,
+      time: 5000,
       list: [],
     };
     this.tick = this.tick.bind(this);
@@ -64,11 +65,17 @@ class ScrollPlay extends React.Component {
   render() {
     return (
       <div>
-        <ListPlayer
-          list={this.state.list}
-          page={this.state.page}
-          nextPage={this.tick}
-        />
+        {(this.state.list.length === 0 ||
+          this.state.list[this.state.page].type !== 2) && (
+          <LoginBar title="放映模式"></LoginBar>
+        )}
+        <div style={{ backgroundColor: "black" }}>
+          <ListPlayer
+            list={this.state.list}
+            page={this.state.page}
+            nextPage={this.tick}
+          />
+        </div>
       </div>
     );
   }

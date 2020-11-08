@@ -14,7 +14,7 @@ class Admin extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      drawer: false,
+      drawer: true,
       page: "modify",
     };
     this.modifyDrawer=this.modifyDrawer.bind(this);

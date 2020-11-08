@@ -5,7 +5,7 @@ import List from "@material-ui/core/List";
 import Toolbar from "@material-ui/core/Toolbar";
 import { ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import Icon from "@material-ui/core/Icon";
-const drawerWidth = 160;
+const drawerWidth = 260;
 const useStyles = (theme) => ({
   drawer: {
     width: drawerWidth,
