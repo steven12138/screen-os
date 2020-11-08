@@ -8,7 +8,7 @@ class Home extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        <Header changePage={this.props.changePage}></Header>
+        <Header changePage={this.props.changePage}/>
         <div
           style={{
             height: "calc(100vh - 64px)",

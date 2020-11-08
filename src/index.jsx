@@ -8,7 +8,7 @@ class PageCtrl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: "Home",
+      page: "Admin",
     };
     this.changePage = this.changePage.bind(this);
   }
@@ -33,5 +33,5 @@ ReactDOM.render(
   <React.StrictMode>
     <PageCtrl />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.querySelector("#root")
 );
