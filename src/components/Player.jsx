@@ -15,7 +15,7 @@ class Player extends React.Component {
       element = (
         <div
           style={{
-            height: "calc(100vh - 64px)",
+            height: "calc(100vh - 147px)",
             width: "100%",
             backgroundImage: "url(" + this.props.url + ")",
             backgroundPosition: "center",
@@ -30,7 +30,7 @@ class Player extends React.Component {
         <video
           onEnded={this.nextPage}
           autoPlay
-          style={{ height: "calc(100vh - 70px)", width: "100%" }}
+          style={{ height: "calc(100% - 147px)", width: "100%" }}
           src={this.props.url}
           id="Scroll_video"
         ></video>

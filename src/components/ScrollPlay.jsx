@@ -24,11 +24,29 @@ function ListPlayer(props) {
 class ScrollPlay extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      page: 0,
-      time: 5000,
-      list: [],
-    };
+    if (this.props.id === 2) {
+      this.state = {
+        page: 0,
+        time: 5000,
+        list: [
+          {
+            url: "https://s1.ax1x.com/2020/11/08/BTwxuF.png",
+            type: 0,
+          },
+        ],
+      };
+    } else {
+      this.state = {
+        page: 0,
+        time: 5000,
+        list: [
+          {
+            url: "https://s1.ax1x.com/2020/11/08/BT03gf.png",
+            type: 0,
+          },
+        ],
+      };
+    }
     this.tick = this.tick.bind(this);
   }
   refresh() {
@@ -67,9 +85,18 @@ class ScrollPlay extends React.Component {
       <div>
         {(this.state.list.length === 0 ||
           this.state.list[this.state.page].type !== 2) && (
-          <LoginBar title="放映模式"></LoginBar>
+          <LoginBar
+            title={
+              "放映模式·" +
+              (this.props.id == 1 ? "左" : "右") +
+              " " +
+              (this.state.page + 1) +
+              "/" +
+              this.state.list.length
+            }
+          ></LoginBar>
         )}
-        <div style={{ backgroundColor: "black" }}>
+        <div style={{ backgroundColor: "black", height: "calc(100vh - 64px)" }}>
           <ListPlayer
             list={this.state.list}
             page={this.state.page}

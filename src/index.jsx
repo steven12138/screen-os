@@ -22,7 +22,8 @@ class PageCtrl extends React.Component {
     return (
       <div>
         {this.state.page === "Home" && <Home changePage={this.changePage} />}
-        {this.state.page === "View" && <View />}
+        {this.state.page === "View1" && <View id={1} />}
+        {this.state.page === "View2" && <View id={2} />}
         {this.state.page === "Admin" && <Admin />}
       </div>
     );

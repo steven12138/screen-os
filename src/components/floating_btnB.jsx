@@ -8,12 +8,12 @@ class FloatingBtn extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    this.props.changePage("View1");
+    this.props.changePage("View2");
   }
   render() {
     return (
       <div
-        style={{ position: "absolute", right: "100px", bottom: "25px" }}
+        style={{ position: "absolute", right: "25px", bottom: "25px" }}
         onClick={this.handleClick}
       >
         <Fab color="secondary" aria-label="BookmarkBorder">

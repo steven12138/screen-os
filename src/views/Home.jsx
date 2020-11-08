@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/LoginBar";
 import FloatingBtn from "../components/floating_btn";
+import FloatingBtnB from "../components/floating_btnB";
 import LoginBox from "../components/LoginBox";
 import BKImage from "../assets/bkg.jpg";
 
@@ -28,7 +29,8 @@ class Home extends React.Component {
           >
             <LoginBox></LoginBox>
           </div>
-          <FloatingBtn changePage={this.props.changePage}></FloatingBtn>
+          <FloatingBtn changePage={this.props.changePage} link="View1"></FloatingBtn>
+          <FloatingBtnB changePage={this.props.changePage} link="View2"></FloatingBtnB>
         </div>
       </div>
     );
