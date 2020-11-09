@@ -50,7 +50,23 @@ class ScrollPlay extends React.Component {
     this.tick = this.tick.bind(this);
   }
   refresh() {
-    //TODO: 获取视频和更换时间
+    axios
+      .get(
+        "https://screen.steven12138z.xyz/php/getlist.php?device=" +
+          this.props.id
+      )
+      .then((res) => {
+        let data = res.data.data;
+        // console.log(data);
+        if (data.length === 0) return;
+        this.setState({
+          list: data,
+        });
+        // console.log(this.list);
+      })
+      .catch((res) => {
+        console.error(res);
+      });
     console.log("WORKING");
   }
   componentDidMount() {
